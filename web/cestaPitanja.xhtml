@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+<title>Cesta pitanja</title>
+
+<link rel="stylesheet"  href="resources/css/style.css"></link>
+
+</h:head>
+<h:body>
+    <h:form>
+<div id="header">
+  <div>
+    <div>
+        <div id="logo"> <a href="#"><img src="resources/images/logo3.png" alt=""></img></a> </div>
+      <div>
+        <div> <p:commandLink value="Moj nalog" action="#{supervizorKontroler.nalog()}" rendered="#{loginController.prijavljen}"></p:commandLink> <a href="#">Help</a> <a href="prijava.xhtml" >Sign in</a> 
+            <p:commandLink value="Korpa" action="#{supervizorKontroler.pregledKorpe()}" rendered="#{loginController.prijavljen}"></p:commandLink> <p:commandLink value="Logout" action="#{loginController.logout1()}" rendered="#{loginController.prijavljen}"></p:commandLink>
+        </div>
+        
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.xhtml">Naslovna</a></li>
+      <li><a href="prodavnica.xhtml">Online Prodavnica</a></li>
+      <li><a href="about.xhtml">O nama</a></li>
+      <li><a href="kontakt.xhtml">Kontakt</a></li>
+      <li><a href="isporuka.xhtml">Isporuka i Povraćaj</a></li>
+      <li class="current"><a href="cestaPitanja.xhtml">Česta pitanja</a></li>
+    </ul>
+      <div class="section"> <a href="#"><img src="resources/images/soljeReg.jpg" alt=""></img></a> </div>
+  </div>
+</div>
+    </h:form>
+<div id="content">
+  <div id="blog">
+    <div id="articles">
+      <ul>
+        <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a>  </span>
+              <h1><a href="#">Kako da poručim model putem sajta?</a></h1>
+              
+              <p>Preporučujemo da izvršite proces registracije kako bi Vam u narednom koraku bila olakšana online kupovina na našem sajtu. Ukoliko želite da se registrujete to možete učiniti klikom na link <a href="registracija.xhtml" class="readmore">ovde</a>.</p>
+              <span id="tag">Tag: <a href="registracija.xhtml">Registracija</a></span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a> </span>
+              <h1><a href="#"> Koji je rok isporuke?</a></h1>
+              
+              <p>Rok isporuke za artikle poručene u periodu od ponedeljka u 00 časova do petka u 10 časova kurirska služba će dostaviti pakete u roku od 72 časa. Za robu poručenu u periodu od petka u 10 časova do nedelje u 24 časa kurirska služba dostaviće pakete najkasnije u četvrtak. Tokom praznika isporuka se vrši u skladu sa radnim vremenom kurirske službe koja radi dostavu.</p>
+              <span id="tag">Tag: <a href="isporuka.xhtml">Isporuka</a> </span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a> </span>
+              <h1><a href="#"> Da li mogu da zamenim artikal koji mi ne odgovara?</a></h1>
+              
+              <p>Da, za realizaciju zamene potrebno je da  pošaljete artikal zajedno sa fiskalnim računom na adresu Vojislava Ilića 5, 11000 Beograd. Rok za zamenu artikla je 14 dana od datuma preuzimanja proizvoda od strane kupca.</p>
+              <span id="tag">Tag: <a href="isporuka.xhtml">Isporuka</a> </span> </div>
+          </div>
+        </li>
+         <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a> </span>
+              <h1><a href="#"> Da li zamenu mogu da izvršim u radnjama?</a></h1>
+              
+              <p>Da, moguće menjati artikle u maloprodajnom objektu. Rok za zamenu artikla je 14 dana od datuma preuzimanja proizvoda od strane kupca.</p>
+              <span id="tag">Tag: <a href="isporuka.xhtml">Isporuka</a> </span> </div>
+          </div>
+        </li>  
+        <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a>  </span>
+              <h1><a href="#">Kako mogu da dobijem novac nazad ako mi model ne odgovara?</a></h1>
+              
+              <p> Ukoliko Vam model ne odgovara, imate mogućnost zamene artikla ili povrat novca. Za povrat novca potrebno je pošaljete mejl na našu e-mail adresu kreativni.svet@gmail.com zajedno sa brojem tekućeg računa. Rok za odustanak od Ugovora je 14 dana od dana isporuke artikla. Povraćaj sredstava izvršiće se kada artikal koji vraćate stigne u radnju  i kada se utvrdi ispravnost artikla. Novac Vam se vraća na tekući račun. Svi troškovi povrata artikla idu na račun kupca. Povraćaj sredstava će se izvršiti u roku od osam dana ako su prethodno navedene stavke ispunjene.</p>
+              <span id="tag">Tag: <a href="isporuka.xhtml">Isporuka</a> </span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a>  </span>
+              <h1><a href="#">Koje je radno vreme Kreativni Svet Call centra?</a></h1>
+              
+              <p>Radno vreme Call centra je radnim danom od 08 do 21h, subotom od 08 do 16h, nedelja je neradni dan.</p>
+              <span id="tag">Tag: <a href="kontakt.xhtml">Radno vreme</a> </span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div> <span class="date">Pitanje</span> <span class="connect">  <a href="#" class="heart">Heart</a> </span>
+              <h1><a href="#"> Da li se isporuka plaća?</a></h1>
+              
+              <p>Isporuka je besplatna za sve porudžbine u vrednosti preko 500 RSD. Za porudžbine u vrednosti manjoj od 500 RSD cena isporuke je 500 RSD. PDV je uračunat u cenu. Od momenta prijema poruke možete očekivati isporuku u naredna 24h. </p>
+              <span id="tag">Tag: <a href="isporuka.xhtml">Isporuka</a> </span> </div>
+          </div>
+        </li>  
+      </ul>
+      
+    </div>
+
+  </div>
+</div>
+<div id="footer">
+  <div class="section">
+    <div>
+      <div class="aside">
+        <div>
+          <div> <b>Previše <span>Zauzeti</span> za kupovinu?</b> <a href="registracija.xhtml">Registruj se besplatno</a>
+            <p>i mi cemo Vam dostaviti do Vaših vrata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured">
+    <ul>
+        <li class="first"> <a href="#"><img src="resources/images/poklon.jpg" alt=""></img></a>
+        <h2><a href="#">Zrno i ništa osim Zrna</a></h2>
+        <p>Ako ste ljubitelj kofeina, beznadežno tražite savršenu šolju za kafu, razmislite o personalizovanim šoljama za kafu. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/puzzle7.jpg" alt=""></img></a>
+        <h2><a href="#">Savršen poklon</a></h2>
+        <p>Ako želite da poklonite sentimentalani personalizovani poklon, kod nas mozete pronaći baš ono što Vam treba. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/uspomene.jpg" alt=""></img></a>
+        <h2><a href="#">Uspomene</a></h2>
+        <p>Zamislite ako biste mogli da sačuvate neke od svojih najboljih uspomena na poklonu koji će na taj način ući u istoriju i biti sačuvan od zaborava.</p>
+      </li>
+        <li> <a href="#"><img src="resources/images/inspire.jpg" alt=""></img></a>
+        <h2><a href="#">Inspirišite se</a></h2>
+        <p>Pogledajte naš sajt kako biste dobili inspiraciju za Vaše bitne dogadjaje.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="navigation">
+    <div>
+      
+        <p>Diplomski-rad Magdalena Stankovic</p>
+          <p>&copy; 2020 All rights reserved</p>
+    </div>
+  </div>
+</div>
+</h:body>
+</html>

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+<title>Isporuka</title>
+
+<link rel="stylesheet"  href="resources/css/style.css"></link>
+
+</h:head>
+<h:body>
+    <h:form>
+<div id="header">
+  <div>
+    <div>
+        <div id="logo"> <a href="#"><img src="resources/images/logo3.png" alt=""></img></a> </div>
+      <div>
+        <div> <p:commandLink value="Moj nalog" action="#{supervizorKontroler.nalog()}" rendered="#{loginController.prijavljen}"></p:commandLink> <a href="#">Help</a> <a href="prijava.xhtml" >Sign in</a> 
+          <p:commandLink value="Korpa" action="#{supervizorKontroler.pregledKorpe()}" rendered="#{loginController.prijavljen}"></p:commandLink> <p:commandLink value="Logout" action="#{loginController.logout1()}" rendered="#{loginController.prijavljen}"></p:commandLink>  
+        </div>
+        
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.xhtml">Naslovna</a></li>
+      <li><a href="prodavnica.xhtml">Online Prodavnica</a></li>
+      <li><a href="about.xhtml">O nama</a></li>
+      <li><a href="kontakt.xhtml">Kontakt</a></li>
+      <li class="current"><a href="isporuka.xhtml">Isporuka i Povraćaj</a></li>
+      <li ><a href="cestaPitanja.xhtml">Česta pitanja</a></li>
+    </ul>
+      <div class="section"> <a href="#"><img src="resources/images/soljeReg.jpg" alt=""></img></a> </div>
+  </div>
+</div>
+    </h:form>
+<div id="content">
+  <div id="services">
+    <div class="aside">
+      <h1>Isporuka, Povraćaj i Reklamacije</h1>
+      <span>Isporuka</span>
+      <p>Mogućnosti dostave zavise od adrese isporuke, vremenu u kojem ste ostvarili kupovinu i dostupnosti proizvoda.
+         U trenutku obrade vaše kupovine, prikazaće se dostupni načini dostave, trošak i datum dostave vaše porudžbine. <br/>
+         Mogućnosti dostave: <br/> a) Preuzimanje uradnji - BESPLATNO <br/> b) Dostava na kućnu adresu: 
+         Standardna dostava - 490 RSD - BESPLATNO (Porudžbine preko 1000 RSD). </p>
+      <span>Povraćaj</span>
+      <p>Ako želite da vratite proizvod kupljen putem stranice KrativniSvet.com, na raspolaganju imate 30 dana od datuma
+          slanja Vaše porudžbine kako biste ostvarili besplatan povraćaj. <br/>
+        Postoje sledeće mogućnosti vraćanja robe: <br/> a) U našoj radnji <br/> b) Na kućnoj adresi.
+          
+      </p>
+      <span>Reklamacije</span>
+      <p>Ukoliko ste robu kupili u online prodavnici, proizvod možete reklamirati na sledeće načine: <br/>
+          - Popunjavanjem reklamacije u bilo kom od naših maloprodajnih objekata i donošenjem na uvid artikla koji reklamirate. <br/>    - Slanjem popunjenog reklamacionog lista na email adresu: reklamacije@kreativnis.net
+          <br/> Rok za podnošenje reklamacije je 2 godine od datuma kupovine.
+           Rok za rešavanje reklamacije je 15 dana od trenutka podnošenja iste.
+        Sve detaljne informacije možete dobiti pozivom našeg Call centra na 0987/123-456</p>
+    </div>
+    <div class="section">
+      <h3>Ostalo</h3>
+      <p> <b>Podeljene porudzbine </b> <br/>
+         Proizvodi iz vaše porudžbine mogu biti poslati iz različitih distribucijskih centara. Ako se to dogodi, e-poštom ćemo vas obavestiti koji će se artikli isporučiti u kojoj dostavi.</p>
+      <p> <b>Status porudzbine </b> <br/>
+         Primaćete ažuriranja stanja porudžbine e-poštom.Možete pristupiti tim podacima i u odeljku „Moj račun”. Ako niste registrovani, kliknite na vezu „Informacije o porudžbini” iz poruke e-pošte s potvrdom kako biste pratili porudžbinu.</p>
+      <p> <b>Povracaj novca</b> <br/>
+          Povraćaj novca će se izvršiti načinom plaćanja koji je upotrijebljen prilikom kupovine;
+          Osim kod porudžbina koje su plaćene gotovinom prilikom preuzimanja i za koje se povraćaji vrše bankovnim transferom. Primićete poruku e-pošte s potvrdom o povraćaju nakon što se izvrši. 
+          Ako je prošlo više od 14 dana, a iznos povraćaja nije primljen na račun, pokažite ovu potvrdu u svojoj banci kako bi se postupak ubrzao.</p>
+      <div id="visitshop">
+        <div>
+          <p><span>Sweets from the heart</span> Treat your loveones</p>
+          <a href="prodavnica.xhtml" class="visit">visit the shop</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="section">
+    <div>
+      <div class="aside">
+        <div>
+          <div> <b>Previše <span>Zauzeti</span> za kupovinu?</b> <a href="registracija.xhtml">Registruj se besplatno</a>
+            <p>i mi cemo Vam dostaviti do Vaših vrata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured">
+    <ul>
+        <li class="first"> <a href="#"><img src="resources/images/poklon.jpg" alt=""></img></a>
+        <h2><a href="#">Zrno i ništa osim Zrna</a></h2>
+        <p>Ako ste ljubitelj kofeina, beznadežno tražite savršenu šolju za kafu, razmislite o personalizovanim šoljama za kafu. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/puzzle7.jpg" alt=""></img></a>
+        <h2><a href="#">Savršen poklon</a></h2>
+        <p>Ako želite da poklonite sentimentalani personalizovani poklon, kod nas mozete pronaći baš ono što Vam treba. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/uspomene.jpg" alt=""></img></a>
+        <h2><a href="#">Uspomene</a></h2>
+        <p>Zamislite ako biste mogli da sačuvate neke od svojih najboljih uspomena na poklonu koji će na taj način ući u istoriju i biti sačuvan od zaborava.</p>
+      </li>
+        <li> <a href="#"><img src="resources/images/inspire.jpg" alt=""></img></a>
+        <h2><a href="#">Inspirišite se</a></h2>
+        <p>Pogledajte naš sajt kako biste dobili inspiraciju za Vaše bitne dogadjaje.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="navigation">
+    <div>
+      
+        <p>Diplomski-rad Magdalena Stankovic</p>
+          <p>&copy; 2020 All rights reserved</p>
+    </div>
+  </div>
+</div>
+</h:body>
+</html>

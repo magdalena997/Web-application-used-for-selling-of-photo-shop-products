@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+<title>Online prodavnica</title>
+
+<link rel="stylesheet"  href="resources/css/style.css"></link>
+
+</h:head>
+    <h:body>
+        <h:form>
+<div id="header">
+  <div>
+    <div>
+        <div id="logo"> <a href="#"><img src="resources/images/logo3.png" alt=""></img></a> </div>
+      <div>
+          <div>  <p:commandLink value="Moj nalog" action="#{supervizorKontroler.nalog()}" rendered="#{loginController.prijavljen}"></p:commandLink> <a href="prijava.xhtml"> Prijavi se</a> 
+            <p:commandLink value="Korpa" action="#{supervizorKontroler.pregledKorpe()}" rendered="#{loginController.prijavljen}"></p:commandLink> <p:commandLink value="Logout" action="#{loginController.logout1()}" rendered="#{loginController.prijavljen}"></p:commandLink>
+            
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.xhtml">Naslovna</a></li>
+      <li class="current"><a href="prodavnica.xhtml">Online Prodavnica</a></li>
+      <li><a href="about.xhtml">O nama</a></li>
+      <li><a href="kontakt.xhtml">Kontakt</a></li>
+      <li><a href="isporuka.xhtml">Isporuka i Povraćaj</a></li>
+      <li><a href="cestaPitanja.xhtml">Česta pitanja</a></li>
+    </ul>
+      <div class="section"> <a href="#"><img src="resources/images/soljeReg.jpg" alt=""></img></a> </div>
+  </div>
+</div>
+        </h:form>
+        <div class="pozadina">
+        <br/><br/><br/>
+        
+        <h:form id="solje" rendered="#{not empty supervizorKontroler.soljeDostupne}">
+            <p:growl id="growl" showDetail="true" sticky="true"/> 
+            <p:dataGrid id="dostupnesolje" var="solje" value="#{supervizorKontroler.soljeDostupne}" style="margin-right: 200px;margin-left: 200px;">
+            <f:facet name="header">
+             Prodavnica artikala
+            </f:facet>
+            <p:panel id="pnl" header="#{solje.naziv}" style="text-align:center">
+                
+               
+               
+                <h:panelGrid columns="1"  style="margin-right: 0px;width:100%">
+                    <p:graphicImage value="resources/images/#{solje.slika}" alt="Image" height="100" width="100"/>
+                </h:panelGrid>
+                <h:panelGrid columns="2" style="width:100%;text-align: center" >
+                     <p:outputLabel value=" Cena artikla:" style="margin-left:0px;margin-right:100px;width:100%;"></p:outputLabel>
+                     <p:outputLabel id="trenutnoStanje" value="#{solje.cena}" style="margin-left:0px;margin-right:40px;width:100%;"></p:outputLabel>                
+                   
+                     
+                     
+                </h:panelGrid>
+
+                <p:commandButton update=":solje:carDetail" oncomplete="PF('carDialog').show()" title="Dodaj u korpu"  style="background-color:lightpink;margin-right: 0px;margin-top:10px; color: #84284D" rendered="#{loginController.prijavljen}">
+                        <f:setPropertyActionListener value="#{solje}" target="#{supervizorKontroler.selectedArt}" />
+                        
+                    </p:commandButton>    
+
+            </p:panel>
+        </p:dataGrid>
+            
+            <p:dialog header="Nastavi kupovinu - #{supervizorKontroler.selectedArt.naziv}" widgetVar="carDialog" modal="true" showEffect="blind" hideEffect="explode" resizable="false">
+        <p:outputPanel id="carDetail" style="text-align:center;">
+
+            <p:panelGrid columns="2">
+            
+            <f:facet name="header">
+                    <p:graphicImage value="resources/images/#{supervizorKontroler.selectedArt.slika}" alt="Image" height="100" width="100"/> 
+                </f:facet>
+            <p:commandButton value="Dodaj sliku" action="#{supervizorKontroler.izaberiSliku(supervizorKontroler.selectedArt)}" style="background-color:lightpink;margin-right: 0px;margin-top:10px; color: #84284D" update="solje"></p:commandButton>
+            <p:commandButton value="Bez printa" action="#{supervizorKontroler.dodajArtikalBezPrint()}" style="background-color:lightpink;margin-right: 0px;margin-top:10px; color: #84284D" update="solje"></p:commandButton>
+            
+             <p:outputLabel value="Dodaj natpis:"></p:outputLabel>
+             <p:inputText value="#{supervizorKontroler.natpis}" class="emailcss"></p:inputText>
+             
+             <p:outputLabel value="Izaberi:" />
+                <p:selectOneMenu id="boja" value="#{supervizorKontroler.bojaSlike}" style="width:100px" required="true" requiredMessage="Ovo polje mora biti popunjeno!" class="cssSlova">
+                        <f:selectItem itemValue="boja" itemLabel="U boji - 100rsd" />
+                        <f:selectItem itemValue="crnoBelo" itemLabel="Crno belo - 50 rsd" />
+                </p:selectOneMenu>
+            
+             <p:commandButton value="Dodaj natpis" action="#{supervizorKontroler.dodajNatpisArtikal(supervizorKontroler.selectedArt)}" style="background-color:lightpink;margin-right: 0px;margin-top:10px; color: #84284D" update="solje"></p:commandButton>
+            </p:panelGrid>
+        </p:outputPanel>
+    </p:dialog>
+            
+    </h:form>
+        
+    </div>
+
+<div id="footer">
+  <div class="section">
+    <div>
+
+    </div>
+  </div>
+  <div id="featured">
+    <ul>
+        <li class="first"> <a href="#"><img src="resources/images/poklon.jpg" alt=""></img></a>
+        <h2><a href="#">Zrno i ništa osim Zrna</a></h2>
+        <p>Ako ste ljubitelj kofeina, beznadežno tražite savršenu šolju za kafu, razmislite o personalizovanim šoljama za kafu. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/puzzle7.jpg" alt=""></img></a>
+        <h2><a href="#">Savršen poklon</a></h2>
+        <p>Ako želite da poklonite sentimentalani personalizovani poklon, kod nas mozete pronaći baš ono što Vam treba. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/uspomene.jpg" alt=""></img></a>
+        <h2><a href="#">Uspomene</a></h2>
+        <p>Zamislite ako biste mogli da sačuvate neke od svojih najboljih uspomena na poklonu koji će na taj način ući u istoriju i biti sačuvan od zaborava.</p>
+      </li>
+        <li> <a href="#"><img src="resources/images/inspire.jpg" alt=""></img></a>
+        <h2><a href="#">Inspirišite se</a></h2>
+        <p>Pogledajte naš sajt kako biste dobili inspiraciju za Vaše bitne dogadjaje.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="navigation">
+    <div>
+      
+        <p>Diplomski-rad Magdalena Stankovic</p>
+          <p>&copy; 2020 All rights reserved</p>
+    </div>
+  </div>
+</div>
+</h:body>
+</html>
+
+

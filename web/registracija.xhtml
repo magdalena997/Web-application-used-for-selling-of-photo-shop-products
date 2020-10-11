@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+<title>Registracija</title>
+
+<link rel="stylesheet"  href="resources/css/style.css"></link>
+
+</h:head>
+<h:body>
+    <h:form>
+<div id="header">
+  <div>
+    <div>
+        <div id="logo"> <a href="#"><img src="resources/images/logo3.png" alt=""></img></a> </div>
+      <div>
+        <div>  <a href="#">Help</a> <a href="prijava.xhtml" >Sign in</a>        
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.xhtml">Naslovna</a></li>
+      <li><a href="prodavnica.xhtml">Online Prodavnica</a></li>
+      <li><a href="about.xhtml">O nama</a></li>
+      <li><a href="kontakt.xhtml">Kontakt</a></li>
+      <li><a href="isporuka.xhtml">Isporuka i Povraćaj</a></li>
+      <li><a href="cestaPitanja.xhtml">Česta pitanja</a></li>
+    </ul>
+      <div class="section"> <a href="#"><img src="resources/images/soljeReg.jpg" alt=""></img></a> </div>
+  </div>
+</div>
+    </h:form>
+<div id="content">
+  <div>
+    <div id="account">
+      <div>
+          <h:form >
+            <span style="text-align: center">REGISTRUJ SE</span>
+            <span><h:messages id="mess3"  showDetail="true" class="errors1" globalOnly="true"></h:messages></span>
+            <table align="center">
+            <tr>
+              <td><h:outputLabel value="Ime:" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputText id="ime" class="emailcss" value="#{registracijaKontroler.ime}" required="true" requiredMessage="Polje za ime mora biti popunjeno!"></h:inputText></td>
+              <td><h:message for="ime" class="errors"></h:message></td>
+            </tr>
+            <tr>
+              <td><h:outputLabel value="Prezime:" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputText id="prezime" class="emailcss" value="#{registracijaKontroler.prezime}" required="true" requiredMessage="Polje za prezime mora biti popunjeno!"></h:inputText></td>
+              <td><h:message for="prezime" class="errors"></h:message></td>
+            </tr>
+            <tr>
+              <td><h:outputLabel value="Username:" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputText id="username" class="emailcss" value="#{registracijaKontroler.username}" required="true" requiredMessage="Polje za username mora biti popunjeno!"></h:inputText></td>
+              <td><h:message id="userMes" for="username" class="errors"></h:message></td>
+              
+            </tr>
+            <tr>
+              <td><h:outputLabel value="Email:" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputText id="email" class="emailcss" value="#{registracijaKontroler.email}" required="true" requiredMessage="Polje za email mora biti popunjeno!"></h:inputText></td>
+              <td><h:message for="email" class="errors"></h:message></td>
+            </tr>
+            <tr>
+              <td><h:outputLabel value="Lozinka" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputSecret id="password" class="emailcss" value="#{registracijaKontroler.password}" required="true" requiredMessage="Polje za lozinku mora biti popunjeno!"></h:inputSecret></td>
+              <td><h:message for="password" id="passmes" class="errors"></h:message></td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Potvrdi lozinku:" class="cssSlova"></h:outputLabel></td>
+                <td><h:inputSecret id="confirmpass" class="emailcss" value="#{registracijaKontroler.passwordAg}" required="true" requiredMessage="Polje za potvrdu lozinke mora biti popunjeno!"></h:inputSecret></td>
+                <td><h:message for="confirmpass" class="errors"></h:message></td>
+             </tr>
+              <tr>
+              <td><h:outputLabel value="Pol:" class="cssSlova"></h:outputLabel></td>
+             <td>
+         <h:selectOneRadio value="#{registracijaKontroler.pol}" id="pol" required="true" requiredMessage="Polje za pol mora biti popunjeno!" class="cssSlova" > 
+            <f:selectItem itemValue = "M" itemLabel = "M"  /> 
+            <f:selectItem itemValue = "Z" itemLabel = "Z" />
+        </h:selectOneRadio>  
+             </td>
+              <td><h:message for="pol" class="errors"></h:message></td>
+              </tr>
+            <tr>
+              <td><h:outputLabel value="Pitanje:" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputText id="pitanje" class="emailcss" value="#{registracijaKontroler.pitanje}" required="true" requiredMessage="Polje za pitanje mora biti popunjeno!"></h:inputText></td>
+              <td><h:message  for="pitanje" class="errors"></h:message></td>
+            </tr>
+            <tr>
+              <td><h:outputLabel value="Odgovor" class="cssSlova"></h:outputLabel></td>
+              <td><h:inputText id="odgovor" class="emailcss" value="#{registracijaKontroler.odgovor}" required="true" requiredMessage="Polje za odgovor mora biti popunjeno!"></h:inputText></td>
+              <td><h:message for="odgovor" class="errors"></h:message></td>
+            </tr>
+                 <tr>
+              <td><h:outputLabel value="Tip:" class="cssSlova"></h:outputLabel></td>
+             <td>
+                 <h:selectOneRadio value="#{registracijaKontroler.tip}" id="tip" required="true" requiredMessage="Polje za tip mora biti popunjeno!" class="cssSlova" > 
+                     <f:selectItem itemValue = "U" itemLabel = "Umetnik" /> 
+                    <f:selectItem itemValue = "A" itemLabel =  "Admin" />
+                    <f:selectItem itemValue = "K" itemLabel = "Kupac" /> 
+                 </h:selectOneRadio>  
+             </td>
+              <td><h:message for="tip" class="errors"></h:message></td>
+              </tr>
+          </table>
+            <h:commandButton value="Registruj se" class="submitbtn"  action="#{registracijaKontroler.registrujse()}" ></h:commandButton>
+
+          </h:form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="section">
+    <div>
+      <div class="aside">
+        <div>
+          <div> <b>Previše <span>Zauzeti</span> za kupovinu?</b> <a href="registracija.xhtml">Registruj se besplatno</a>
+            <p>i mi cemo Vam dostaviti do Vaših vrata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured">
+    <ul>
+        <li class="first"> <a href="#"><img src="resources/images/poklon.jpg" alt=""></img></a>
+        <h2><a href="#">Zrno i ništa osim Zrna</a></h2>
+        <p>Ako ste ljubitelj kofeina, beznadežno tražite savršenu šolju za kafu, razmislite o personalizovanim šoljama za kafu. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/puzzle7.jpg" alt=""></img></a>
+        <h2><a href="#">Savršen poklon</a></h2>
+        <p>Ako želite da poklonite sentimentalani personalizovani poklon, kod nas mozete pronaći baš ono što Vam treba. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/uspomene.jpg" alt=""></img></a>
+        <h2><a href="#">Uspomene</a></h2>
+        <p>Zamislite ako biste mogli da sačuvate neke od svojih najboljih uspomena na poklonu koji će na taj način ući u istoriju i biti sačuvan od zaborava.</p>
+      </li>
+        <li> <a href="#"><img src="resources/images/inspire.jpg" alt=""></img></a>
+        <h2><a href="#">Inspirišite se</a></h2>
+        <p>Pogledajte naš sajt kako biste dobili inspiraciju za Vaše bitne dogadjaje.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="navigation">
+    <div>
+      
+        <p>Diplomski-rad Magdalena Stankovic</p>
+          <p>&copy; 2020 All rights reserved</p>
+    </div>
+  </div>
+</div>
+</h:body>
+</html>

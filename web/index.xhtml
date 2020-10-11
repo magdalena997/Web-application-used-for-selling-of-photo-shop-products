@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+<title>Pocetna</title>
+
+<link rel="stylesheet"  href="resources/css/style.css"></link>
+
+</h:head>
+<h:body>
+    <h:form>
+<div id="header">
+  <div>
+    <div>
+        <div id="logo"> <a href="#"><img src="resources/images/logo3.png" alt=""></img></a> </div>
+      <div>
+          <div> <p:commandLink value="Admin" action="#{supervizorKontroler.admin()}" rendered="#{loginController.admin}"></p:commandLink> <p:commandLink value="Umetnik" action="#{supervizorKontroler.umetnik()}" rendered="#{loginController.umetnik}"></p:commandLink> <p:commandLink value="Moj nalog" action="#{supervizorKontroler.nalog()}" rendered="#{loginController.prijavljen}"></p:commandLink> <a href="admin.xhtml">Help</a> <a href="prijava.xhtml" >Sign in</a> 
+            <p:commandLink value="Korpa" action="#{supervizorKontroler.pregledKorpe()}" rendered="#{loginController.prijavljen}"></p:commandLink> <p:commandLink value="Logout" action="#{loginController.logout1()}" rendered="#{loginController.prijavljen}"></p:commandLink>
+        </div>
+        
+      </div>
+    </div>
+    <ul>
+      <li class="current"><a href="index.xhtml">Naslovna</a></li>
+      <li><a href="prodavnica.xhtml">Online Prodavnica</a></li>
+      <li><a href="about.xhtml">O nama</a></li>
+      <li><a href="kontakt.xhtml">Kontakt</a></li>
+      <li><a href="isporuka.xhtml">Isporuka i Povraćaj</a></li>
+      <li ><a href="cestaPitanja.xhtml">Česta pitanja</a></li>
+    </ul>
+      <div id="section">      
+          <ul>
+        <li><a>solje</a></li>
+        <li><a >slagalice</a></li>
+        <li><a >majice</a></li>
+        <li class="selected"><a >notesi</a></li>
+        <li><a >termosi</a></li>
+        <li><a >snezne kugle</a></li>
+        <li><a >privesci</a></li>
+        <li><a >jastuci</a></li>
+        <li><a >drugi artikli</a></li>
+      </ul>
+          <a href="#"><img src="resources/images/notebooks1.jpg" alt="" height="360" width="700"></img></a>  </div>
+  </div>
+</div>
+    </h:form>
+<div id="content">
+  <div class="home">
+    <div class="aside">
+      <h1>Dobrodosli u online prodavnicu</h1>
+      <p>Dragi naši, čast nam je da Vam predstavimo našu redizajniranu Internet prodavnicu u kojoj je sve na klik od vas.</p>
+      <p>Naša veb stranica pažljivo je osmišljena da Vam pruži neverovatno online kupovine, a njena lakoća navigacije je nešto za šta mislimo da će prerasti u vašu naviku. Slobodno pregledajte naš celokupni katalog proizvoda i javite nam ako imate bilo kakvih pitanja, komentara ili nedoumica u vezi sa predmetima smeštenim u njima. Naš tim je uvek spreman i voljan da pomogne našim kupcima i drago nam je zbog vaše posete.</p>
+      <p>Ako imate bilo kakvih pitanja o ovoj prodavnici ili proizvodima koje nudimo, slobodno nas kontaktirajte u bilo koje vreme. <a href="about.xhtml" class="readmore">read more</a></p>
+    </div>
+    <div class="section">
+      <div>
+        <h2>Naša priča</h2>
+        <p>KRATIVNI SVET je porodična manufaktura osnovana 2005. godine u Beogradu. Naše proizvode nudimo Vam po povoljnim cenama, uz visok kvalitet. Da smo na dobrom putu, govori sve veći broj zadovoljnih kupaca! Ideja vodilja za osnivanje radionice bila je da se porodica okupi na jednom mestu i da svi zajedno pomažu u stvaranju kreativnih stvari.</p>
+      </div>
+      <ul>
+          <li class="first"> <a ><img src="resources/images/snezne-kugle-3.jpg" alt="" height="198" width="170"></img></a> </li>
+          <li> <a ><img src="resources/images/lepotica1.jpg" alt="" height="180" width="180"></img></a> </li>
+          
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="footer">
+ <div class="home">
+    <div>
+      <div class="aside">
+        <div class="signup">
+          <div> <b>Previše <span>Zauzeti</span> za kupovinu?</b> <a href="registracija.xhtml">Registruj se besplatno</a>
+            <p>i mi cemo Vam dostaviti do Vaših vrata</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  <div id="featured">
+    <ul>
+        <li class="first"> <a href="#"><img src="resources/images/poklon.jpg" alt=""></img></a>
+        <h2><a href="#">Zrno i ništa osim Zrna</a></h2>
+        <p>Ako ste ljubitelj kofeina, beznadežno tražite savršenu šolju za kafu, razmislite o personalizovanim šoljama za kafu. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/puzzle7.jpg" alt=""></img></a>
+        <h2><a href="#">Savršen poklon</a></h2>
+        <p>Ako želite da poklonite sentimentalani personalizovani poklon, kod nas mozete pronaći baš ono što Vam treba. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/uspomene.jpg" alt=""></img></a>
+        <h2><a href="#">Uspomene</a></h2>
+        <p>Zamislite ako biste mogli da sačuvate neke od svojih najboljih uspomena na poklonu koji će na taj način ući u istoriju i biti sačuvan od zaborava.</p>
+      </li>
+        <li> <a href="#"><img src="resources/images/inspire.jpg" alt=""></img></a>
+        <h2><a href="#">Inspirišite se</a></h2>
+        <p>Pogledajte naš sajt kako biste dobili inspiraciju za Vaše bitne dogadjaje.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="navigation">
+    <div>
+        <p>Diplomski-rad Magdalena Stankovic</p>
+          <p>&copy; 2020 All rights reserved</p>
+    </div>
+  </div>
+</div>
+</h:body>
+</html>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+<title>O nama</title>
+
+<link rel="stylesheet"  href="resources/css/style.css"></link>
+
+</h:head>
+<h:body>
+    <h:form>
+<div id="header">
+  <div>
+    <div>
+        <div id="logo"> <a href="#"><img src="resources/images/logo3.png" alt=""></img></a> </div>
+      <div>
+        <div> <p:commandLink value="Moj nalog" action="#{supervizorKontroler.nalog()}" rendered="#{loginController.prijavljen}"></p:commandLink> <a href="#">Help</a> <a href="prijava.xhtml" >Sign in</a> 
+            <p:commandLink value="Korpa" action="#{supervizorKontroler.pregledKorpe()}" rendered="#{loginController.prijavljen}"></p:commandLink> <p:commandLink value="Logout" action="#{loginController.logout1()}" rendered="#{loginController.prijavljen}"></p:commandLink>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.xhtml">Naslovna</a></li>
+      <li><a href="prodavnica.xhtml">Online Prodavnica</a></li>
+      <li class="current"><a href="about.xhtml">O nama</a></li>
+      <li><a href="kontakt.xhtml">Kontakt</a></li>
+      <li><a href="isporuka.xhtml">Isporuka i Povraćaj</a></li>
+      <li ><a href="cestaPitanja.xhtml">Česta pitanja</a></li>
+    </ul>
+      <div class="section"> <a href="#"><img src="resources/images/soljeReg.jpg" alt=""></img></a> </div>
+  </div>
+</div>
+    </h:form>
+<div id="content">
+  <div id="about">
+    <div class="aside">
+      <h1>Upoznajte KREATIVNI SVET</h1>
+      <span>Porodica kao temelj poslovanja</span>
+      <p> KRATIVNI SVET  je osnovana 2005. godine u Beogradu. U početku osnovna delatnost firme je bila usluga fotokopiranja studentima, građanstvu i firmama. Naša firma prati savremene trendove u oblastima fotokopiranja tako da smo opremljeni sa savremenim
+  kvalitetnim mašinama. U nameri da održimo tradiciju i kvalitet, ali i da bismo ispratili trendove, stvorila se želja da se okrenemo malo drugačijim stvarima i tako smo krenuli da se bavimo štampanjem na ratličitim predmetima.</p>
+      <span>On-line prodavnica</span>
+      <p>Period najvećeg rasta usledio je 2018. godine, kada smo otvorili ovaj web shop i tada je naše poslovanje malo izmenilo svoj tok. Naša firma je sve više rasla, srećni smo kada svima mozemo da izadjemo u suret i da ispunjavamo želje naših klijenata.</p>
+      <span>Ljubav prema ovom poslu</span>
+      <p>Uspeli smo da neke sasvim obične i svakodnevne stvari učinimo nesvakidašnjim i persoalizovanim. Ljudi koji nam se iznova vraćaju, nas podsećaju da moramo da se trudimo da budemo još bolji i da širimo naš asortiman. Iz dugogodišnje poslovne saradnje izrodilo se obostrano poverenje kao kruna našeg zajedničkog truda i rada.</p>
+      <span>Podaci o firmi</span>
+      <p>Skraćeno poslovno ime: Kreativni svet doo Beograd <br/>
+        Puno poslovno ime: Kreativni svet doo, Vojislava Ilića 5, Beograd <br/>
+        Pravna forma: DOO - Društvo sa ograničenom odgovornošću <br/>
+        Obveznik PDV: da <br/>
+        Poreski identifikacioni broj: 104451234 <br/>
+        Matični broj pravnog lica: 12345678 <br/>
+        Registarski broj: 1234567890 <br/>
+        Broj obveznika PDV-a: 1234567890 <br/>
+        Registar privrednih subjekataBD. 098765/2005 od 21.08.2005.</p>
+    </div>
+    <div class="section">
+      <div id="visitshop">
+        <div>
+          <p><span>Sweets from the heart</span> Treat your loveones</p>
+          <a href="prodavnica.xhtml" class="visit">visit the shop</a> </div>
+      </div>
+      <div>
+        <h3>Po čemu se izdvajamo od drugih</h3>
+        <p>Izuzetno ljubazni i edukovani prodavci, kao i velika posvećenost postprodajnim aktivnostima prema kupcu. Taj pristup i način rada odvajaju firmu u kvalitativnom smislu od konkurencije, što je ujedno i njena najveća komparativna prednost. I pored ovih aktivnosti i načina rada,
+            nastojimo da ispunimo 3 najbitnije stavke: <br/>
+            - Širok asortiman i izbor robe prilagođen zahtevu potrošača, <br/>
+        - Najbolja cena i veliki izbor načina odloženog plaćanja,<br/>
+        - Specijalizovan i dobro obučen prodavac. </p>
+      </div>
+      <div>
+        <h3>Adresa</h3>
+        <p> Vojislava Ilića 5<br/>
+            11000 (Zvezdara) Beograd, Srbija</p>
+      </div>
+      <div> <a href="#" class="callus">POZOVI NAS <span>+381 611234569</span></a> </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="section">
+    <div>
+      <div class="aside">
+        <div>
+          <div> <b>Previše <span>Zauzeti</span> za kupovinu?</b> <a href="registracija.xhtml">Registruj se besplatno</a>
+            <p>i mi cemo Vam dostaviti do Vaših vrata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured">
+    <ul>
+        <li class="first"> <a href="#"><img src="resources/images/poklon.jpg" alt=""></img></a>
+        <h2><a href="#">Zrno i ništa osim Zrna</a></h2>
+        <p>Ako ste ljubitelj kofeina, beznadežno tražite savršenu šolju za kafu, razmislite o personalizovanim šoljama za kafu. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/puzzle7.jpg" alt=""></img></a>
+        <h2><a href="#">Savršen poklon</a></h2>
+        <p>Ako želite da poklonite sentimentalani personalizovani poklon, kod nas mozete pronaći baš ono što Vam treba. </p>
+      </li>
+        <li> <a href="#"><img src="resources/images/uspomene.jpg" alt=""></img></a>
+        <h2><a href="#">Uspomene</a></h2>
+        <p>Zamislite ako biste mogli da sačuvate neke od svojih najboljih uspomena na poklonu koji će na taj način ući u istoriju i biti sačuvan od zaborava.</p>
+      </li>
+        <li> <a href="#"><img src="resources/images/inspire.jpg" alt=""></img></a>
+        <h2><a href="#">Inspirišite se</a></h2>
+        <p>Pogledajte naš sajt kako biste dobili inspiraciju za Vaše bitne dogadjaje.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="navigation">
+    <div>
+      
+        <p>Diplomski-rad Magdalena Stankovic</p>
+          <p>&copy; 2020 All rights reserved</p>
+    </div>
+  </div>
+</div>
+</h:body>
+</html>
